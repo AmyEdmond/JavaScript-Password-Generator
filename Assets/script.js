@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+// List possible characters 
 
 var character = []
 var lowercase = "abcdefghijknopqrstuvwxyz".split("");
@@ -9,6 +9,8 @@ var uppercase = "AACDEFGHJKLMNPQRSTUVWXYZ".split("");
 var numbers = "012345679".split("");
 var special = "!@$<&*?>}{".split("");
 var password= ""
+
+//Function to ask user questions and Generate password
 
 function generatePassword() {
   var passwordLength = prompt("Please specify how many characters you want in your password")
@@ -47,6 +49,7 @@ function generatePassword() {
       return password;
 }
 
+//Write password to the #password input.
 function writePassword() {
   password = generatePassword();
   var passwordText = document.querySelector("#password");
